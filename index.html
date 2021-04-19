@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="stylesheet" href="myNormalize.css">
+	<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Oswald&display=swap" rel="stylesheet">
+	<script src="js.js"></script>
+</head>
+<body>
+  <div id="todo">
+  <header>
+    <h1 id="my-todo-list">MY TO-DO LIST</h1>
+  </header>
+  <div id="add-todo" class="flex-container-row">
+  <input id="add-item" type="text" placeholder="Впишите задание...">
+    <button id="add-button" onclick="addItem()">Добавить</button>
+  </div>
+  <ul id="todo-list" class="flex-container-column">
+  </ul>
+  <hr>
+  <footer class="flex-container-row">
+      <div id="filter-p-div">
+      <p id="p-filter">Отображать только: </p> 
+    </div>
+    <div id="filter-checkbox" class="flex-container-row">
+      <div>
+        <input type="checkbox" id="opened" class="filter" name="filter" value="Открыто">
+        <label for="opened">Открытые</label>
+      </div>
+      <div>
+        <input type="checkbox" id="inwork" class="filter" name="filter" value="В работе">
+        <label for="inwork">В работе</label>
+      </div>
+      <div>
+        <input type="checkbox" id="done" class="filter" name="filter" value="Выполнено">
+        <label for="done">Выполненные</label>
+      </div>
+    </div>
+      <button id="apply-filter" onclick="applyFilter()">Показать</button>
+      <button id="reset-filter" disabled onclick="reset()">Сбросить</button>
+  </footer>
+</div>
+</body>
+  </html>
